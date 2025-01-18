@@ -7,6 +7,7 @@ import { CustomContext } from './intefraces/context.interface';
 export class BotUpdate {
   @Command('start')
   async onStart(@Ctx() ctx: CustomContext): Promise<void> {
+    console.log('Start command received'); 
     await ctx.scene.enter('greeting_scene');
   }
 
