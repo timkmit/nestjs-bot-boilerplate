@@ -12,7 +12,7 @@ services:
     volumes:
       - public-data:/app/public
     restart: always
-    command: ["sh", "-c", "npx prisma migrate deploy && yarn start"]
+    command: ["sh", "-c", "wait-for-it db:5432 -- npx prisma migrate deploy && yarn start"]
 
   db:
     image: postgres:13
