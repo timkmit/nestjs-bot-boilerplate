@@ -7,10 +7,10 @@ export class GreetingScene {
   async onSceneEnter(@Ctx() ctx: any): Promise<void> {
     const userName = ctx.from?.first_name || "Гость";
     await ctx.reply(
-      `Привет, ${userName}! Добро пожаловать!`,
+      `Hi, ${userName}! You are welcome!`,
       Markup.keyboard([
-        ['🔎 Сцена 1', '✍️ Сцена 2'],
-        ['✅ Сйцена 3', '❌ Сцена 4']
+        ['⬅️ Go to scene 1', '➡️ Go to scene 2'],
+        ['➡️ Go to scene 3']
       ]).resize()
     );
   }
