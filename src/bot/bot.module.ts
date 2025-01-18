@@ -4,6 +4,10 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { session } from 'telegraf';
 import { MainMenuScene } from './scenes/main.scene';
 import { UsersModule } from '../users/users.module';
+import { Scene1 } from './scenes/first.scene';
+import { Scene2 } from './scenes/second.scene';
+import { Scene3 } from './scenes/third.scene';
+import { GreetingScene } from './scenes/greeting.scene';
 
 @Module({
   imports: [
@@ -21,6 +25,6 @@ import { UsersModule } from '../users/users.module';
     }),
     UsersModule,
   ],
-  providers: [MainMenuScene],
+  providers: [MainMenuScene, Scene1, Scene2, Scene3, GreetingScene],
 })
 export class BotModule {}
