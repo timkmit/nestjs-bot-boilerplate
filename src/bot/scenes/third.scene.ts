@@ -10,9 +10,9 @@ export class Scene3 {
     ctx.session.userName = ctx.from?.first_name || 'Visitor';
     await ctx.reply(
       `Hi, ${ctx.session.userName}! You are on scene 3.`,
-      Markup.keyboard([
-        ['⬅️ Go to menu']
-      ]).resize()
+      Markup.inlineKeyboard([
+        Markup.button.callback('⬅️ Go to menu', 'go_to_menu'),
+      ])
     );
   }
 }

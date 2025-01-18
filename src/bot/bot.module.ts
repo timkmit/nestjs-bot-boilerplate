@@ -26,6 +26,13 @@ import { BotUpdate } from './bot.update';
     }),
     UsersModule,
   ],
-  providers: [MainMenuScene, Scene1, Scene2, Scene3, GreetingScene, BotUpdate],
+  providers: [
+    MainMenuScene, 
+    Scene1, 
+    Scene2, 
+    Scene3, 
+    GreetingScene, 
+    BotUpdate]
+    ,
 })
 export class BotModule {}

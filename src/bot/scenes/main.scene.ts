@@ -22,10 +22,10 @@ export class MainMenuScene {
     });
 
     await ctx.reply(
-      `Main menu. User ${user.firstName} created.`,
+      `Main menu. User ${user.firstName}.`,
       Markup.keyboard([
-        ['🔎 Scene 1', '✍️ Scene 2'], 
-        ['✅ Scene 3']])
+        ['⬅️ Go to scene 1', '➡️ Go to scene 2'], 
+        ['➡️ Go to scene 3']])
         .resize()
     );
   }
