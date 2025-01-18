@@ -8,6 +8,7 @@ import { Scene1 } from './scenes/first.scene';
 import { Scene2 } from './scenes/second.scene';
 import { Scene3 } from './scenes/third.scene';
 import { GreetingScene } from './scenes/greeting.scene';
+import { BotUpdate } from './bot.update';
 
 @Module({
   imports: [
@@ -25,6 +26,6 @@ import { GreetingScene } from './scenes/greeting.scene';
     }),
     UsersModule,
   ],
-  providers: [MainMenuScene, Scene1, Scene2, Scene3, GreetingScene],
+  providers: [MainMenuScene, Scene1, Scene2, Scene3, GreetingScene, BotUpdate],
 })
 export class BotModule {}
